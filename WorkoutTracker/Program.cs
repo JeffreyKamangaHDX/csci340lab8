@@ -1,34 +1,30 @@
-using WorkoutTracker.Data;
 using Microsoft.EntityFrameworkCore;
-
+using WorkoutTracker.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
 
-
 builder.Services.AddDbContext<WorkoutContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("WorkoutContext")));
-
+    options.UseSqlite(
+        builder.Configuration.GetConnectionString("WorkoutContext")
+        ?? "Data Source=workouts.db"));
 
 var app = builder.Build();
-
 
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 
 app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapStaticAssets();
-app.MapRazorPages()
-   .WithStaticAssets();
+app.MapRazorPages();
 
 app.Run();
