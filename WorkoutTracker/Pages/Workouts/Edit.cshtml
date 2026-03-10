@@ -1,0 +1,52 @@
+@page
+@model WorkoutTracker.Pages_Workouts.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Workout</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Workout.Id" />
+            <div class="form-group">
+                <label asp-for="Workout.ExerciseName" class="control-label"></label>
+                <input asp-for="Workout.ExerciseName" class="form-control" />
+                <span asp-validation-for="Workout.ExerciseName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Workout.MuscleGroup" class="control-label"></label>
+                <input asp-for="Workout.MuscleGroup" class="form-control" />
+                <span asp-validation-for="Workout.MuscleGroup" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Workout.Reps" class="control-label"></label>
+                <input asp-for="Workout.Reps" class="form-control" />
+                <span asp-validation-for="Workout.Reps" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Workout.Weight" class="control-label"></label>
+                <input asp-for="Workout.Weight" class="form-control" />
+                <span asp-validation-for="Workout.Weight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Workout.Date" class="control-label"></label>
+                <input asp-for="Workout.Date" class="form-control" />
+                <span asp-validation-for="Workout.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
