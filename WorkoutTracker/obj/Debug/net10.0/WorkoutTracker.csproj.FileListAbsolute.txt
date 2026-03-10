@@ -364,3 +364,4 @@ C:\Users\fadek\csci340\csci340lab8\WorkoutTracker\obj\Debug\net10.0\refint\Worko
 C:\Users\fadek\csci340\csci340lab8\WorkoutTracker\obj\Debug\net10.0\WorkoutTracker.pdb
 C:\Users\fadek\csci340\csci340lab8\WorkoutTracker\obj\Debug\net10.0\WorkoutTracker.genruntimeconfig.cache
 C:\Users\fadek\csci340\csci340lab8\WorkoutTracker\obj\Debug\net10.0\ref\WorkoutTracker.dll
+C:\Users\fadek\csci340\csci340lab8\WorkoutTracker\obj\Debug\net10.0\WorkoutTracker.sourcelink.json
